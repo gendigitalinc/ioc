@@ -1,0 +1,29 @@
+# IoCs for Remus Browser Extension
+
+Analysis and more technical information at: <https://www.gendigital.com/blog/insights/research/remus-stealer-email-interception-analysis>.
+
+**Note:** [`samples.sha1`](samples.sha1) and [`samples.md5`](samples.md5) list the hashes in the same order as [`samples.sha256`](samples.sha256).
+
+## Email Interception Module (x64 DLL) - SHA-256
+```
+2d92fe0b3b918bdbca318879a65bd5a00e63e00b181085afdeed6922c85f90bd
+e13e019dae958f20d7a252adf64888ab6e6c427622b67c5bf7ae6ffa4a0e25f3
+```
+
+## Extension Archive (ZIP) - SHA-256
+```
+75e5225cb2fca8b62718648e0c663b9003048a19860ae9f0458f7d904220e693
+39cb29f0985fa58d6b4f632948d543c3633e0a8ab1a51a360a813f2752eb082f
+```
+
+## Extension Script (extension.js) - SHA-256
+```
+ae9556b371d29e5fd1f7ff45c00fb60644d6cd8c5bfc1b78a565c1f6296f3a81
+acf1b83914aca2944f55be6ff269cc984f35e3a757a12d9cd036e428c93087bc
+```
+
+## Malicious Extension IDs
+```
+cfmepkojgnkahbmgablgdahdomjdppgf
+mgggekjcdcdaiagafcbdhcdapifehhmc
+```
