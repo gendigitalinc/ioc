@@ -5,7 +5,7 @@ dropper, resolve a backend through a smart contract on Base, complete an
 ECDH P-256 handshake, and deliver a 131 MB ZIP containing a signed Twake
 Desktop build with a malicious `app.asar`.
 
-Stage 2 is a PLAC/IAOB bundle named `volume_handler.json`.
+Stage 2 is a **HijackLoader / GHOSTPULSE / IDAT Loader** bundle named `volume_handler.json` (IDAT chunks, magic `C6 A5 79 EA`, XOR + LZNT1). Its module CRC32 table matches the public HijackLoader enum (29/30 exact).
 
 Original discovery: <https://x.com/inf0stache/status/2125653864984772753>
 
@@ -50,6 +50,15 @@ a51c66bf3209716de0964f2d01639592dffdbed163e0ff9a04fab3bd381847fc decoded PLAC/IA
 Only `volume_handler.json` (and its decoded bundle) is treated as the malicious
 stage-2 component. The accompanying `eventprime.dat` file and the signed iTop,
 SQLite and Microsoft runtime files are not listed as malware samples.
+
+## C2 model
+
+HijackLoader has no persistent C2 of its own. The 31 modules are network-free; the final payload carries its own C2. In this campaign the observed network infrastructure is the wrapper: the stage-1 Electron beacon `github[.]desktop[.]ug/api/` and the delivery backends `secure-bot[.]club` / `ficoso[.]click` resolved through the Base contracts. The final payload's C2 is not present in the recovered loader.
+
+References:
+- <https://www.zscaler.com/blogs/security-research/technical-analysis-hijackloader>
+- <https://medium.com/@baglai.vlad/hijackloader-ghostpulse-idat-loader-comprehensive-analysis-6e15f48eb96d>
+- <https://www.elastic.co/security-labs/ghostpulse-haunts-victims-using-defense-evasion-bag-o-tricks>
 
 ## Network indicators
 
