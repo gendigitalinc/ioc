@@ -1,0 +1,8 @@
+filedrop.js
+volume_handler.json
+eventprime.dat
+latest-version_*.zip
+Inst.app_*.exe
+readme.txt
+daemon.log
+resources/app.asar
